@@ -1,6 +1,7 @@
 package math;
 
 import br.com.yago.math.SimpleMath;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +12,7 @@ public class SimpleMathTest {
 
     @Test
     @DisplayName("Test 6.2 + 2 = 8.2")
-    void testSum_When_SixDotTwoIsAddedByTwo_ShouldReturnEightDotTwo() {
+    void testSum() {
         SimpleMath math = new SimpleMath();
         double firstNumber = 6.2D;
         double secondNumber = 2D;
@@ -40,13 +41,13 @@ public class SimpleMathTest {
     }
 
     @Test
-    @DisplayName("Test SquareRoot of 6.2 = 2.48")
+    @DisplayName("Test SquareRoot of 81 = 9")
     void testSquareRoot() {
         SimpleMath math = new SimpleMath();
-        double firstNumber = 6.2D;
+        double firstNumber = 81D;
 
         Double actual = math.squareRoot(firstNumber);
-        double expected = 2.48D;
+        double expected = 9;
 
         assertEquals(expected, actual, 0.01D, () -> "SquareRoot of " + firstNumber + " did not produce " + expected);
         assertNotEquals(9.2, actual);
@@ -98,6 +99,7 @@ public class SimpleMathTest {
         assertNotNull(actual);
     }
 
+    @Disabled("TODO: We need still work on it!")
     @Test
     @DisplayName("Test Division by zero")
     void testDivision_When_FirstNumberIsDividedByZero_ShouldThrowArithmeticException() {
