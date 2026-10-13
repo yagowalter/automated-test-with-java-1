@@ -6,7 +6,7 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName("Test Math operations in SimpleMath Class")
-public class SimpleMathTest {
+public class SimpleMathTestS3 {
 
     SimpleMath math;
 
