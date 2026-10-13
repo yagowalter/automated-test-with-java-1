@@ -3,10 +3,7 @@ package math;
 import br.com.yago.math.SimpleMath;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.CsvFileSource;
-import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.params.provider.*;
 
 import java.util.stream.Stream;
 
@@ -20,6 +17,13 @@ public class SimpleMathTestS4 {
     @BeforeEach
     void beforeEachMethod() {
         math = new SimpleMath();
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"Pelé", "Senna", "Keith Moon"})
+    void testValueSource(String firstName) {
+        System.out.println(firstName);
+        assertNotNull(firstName);
     }
 
     @DisplayName("Test double division [ firstNumber,  secondNumber,  expected]")
