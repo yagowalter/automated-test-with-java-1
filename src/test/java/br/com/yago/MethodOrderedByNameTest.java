@@ -13,8 +13,8 @@ class MethodOrderedByNameTest {
     }
 
     @Test
-    void testB() {
-        System.out.println("Running Test B");
+    void testD() {
+        System.out.println("Running Test D");
     }
 
     @Test
@@ -23,8 +23,8 @@ class MethodOrderedByNameTest {
     }
 
     @Test
-    void testD() {
-        System.out.println("Running Test D");
+    void testB() {
+        System.out.println("Running Test B");
     }
 
 }
